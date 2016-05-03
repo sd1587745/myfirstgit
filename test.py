@@ -56,3 +56,5 @@ for t in triangles():
         break
 
 print([5] + [4,6])
+
+print('hello world')
