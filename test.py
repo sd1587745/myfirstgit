@@ -60,3 +60,38 @@ print([5] + [4,6])
 print('hello world')
 
 print('good day today')
+
+def before(fn):
+    print("nimade")
+    def wrapperd():
+        return fn()+ "123123"
+    print("caodan")
+    return wrapperd
+
+#@before
+def test():
+    return "hello"
+#
+test=before(test)
+
+
+print(test())
+
+
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+    def print_score(self):
+        print('%s, %s' % (self.name, self.score))
+    def get_grade(self):
+        if self.score >=90:
+            print('A')
+        elif self.score >=60:
+            print('B')
+        else:
+            print('C')
+
+hi = Student('Bale',80)
+hi.print_score()
+hi.get_grade()
