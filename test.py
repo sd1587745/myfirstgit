@@ -5,6 +5,7 @@ def f(x):
     return x*x
 
 print(list(map(f,listNum)))
+print(map(f,listNum))
 def fa(x, y):
     return x + y
 
@@ -63,20 +64,20 @@ print('good day today')
 
 def before(fn):
     print("nimade")
-    def wrapperd():
-        return fn()+ "123123"
+    fn()
+        #return fn()+ "123123"
     print("caodan")
-    return wrapperd
+    return fn
 
 #@before
 def test():
-    return "hello"
+    print('hello')
 #
 test=before(test)
 
 
-print(test())
-
+#print(test())
+print('yes')
 
 class Student(object):
     def __init__(self, name, score):
@@ -95,3 +96,4 @@ class Student(object):
 hi = Student('Bale',80)
 hi.print_score()
 hi.get_grade()
+print('abc'+'abc')
